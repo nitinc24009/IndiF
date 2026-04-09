@@ -1,9 +1,8 @@
-INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
+# INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
 
 <p align="center">
-  <b> Multilingual |  Audio + Text |  Benchmark for Fraud Detection</b>
+  <b>Multilingual | Audio + Text | Benchmark for Fraud Detection</b>
 </p>
-
 
 <p align="center">
   <img src="https://img.shields.io/badge/Dataset-189K%2B%20Samples-blue">
@@ -12,157 +11,163 @@ INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
   <img src="https://img.shields.io/badge/Modalities-Audio%20%2B%20Text-purple">
 </p>
 
+---
 
+## Overview
 
-Overview
-
-INDICA is a comprehensive benchmark for telecom fraud call analysis in Indic languages.
+INDICA is a comprehensive benchmark for telecom fraud call analysis in Indic languages.  
 It is built on the IndiF dataset, the first large-scale multilingual dataset for fraud detection in telecom conversations.
 
 This benchmark enables research in:
-	•	 Scenario Classification
-	•	 Fraud Call Detection
-	•	 Fraud-Type Classification
+- Scenario Classification
+- Fraud Call Detection
+- Fraud-Type Classification
 
-INDICA addresses key challenges in existing systems:
-	•	Lack of multilingual datasets
-	•	Limited reproducibility
-	•	Poor cross-lingual generalization
+INDICA addresses key challenges:
+- Lack of multilingual datasets  
+- Limited reproducibility  
+- Poor cross-lingual generalization  
 
+---
 
- Key Contributions
-	•	IndiF Dataset
-	•	189,420 samples across 10 Indic languages
-	•	Audio + text modalities
-	•	Fine-grained annotations
-	•	 INDICA Benchmark
-	•	Evaluation across speech, text, and multimodal models
-	•	Standardized experimental setup
-	•	 Multilingual Setup
-	•	Enables robust cross-lingual evaluation
+## Key Contributions
 
+- **IndiF Dataset**
+  - 189,420 samples across 10 Indic languages  
+  - Audio + text modalities  
+  - Fine-grained annotations  
 
- Dataset: IndiF
+- **INDICA Benchmark**
+  - Evaluation across speech, text, and multimodal models  
+  - Standardized experimental setup  
 
- Languages
+- **Multilingual Setup**
+  - Enables robust cross-lingual evaluation  
 
+---
+
+## Dataset: IndiF
+
+### Languages
 Assamese, Bengali, English, Gujarati, Hindi, Kannada, Malayalam, Odia, Tamil, Telugu
 
+### Dataset Statistics
 
- Dataset Statistics
+| Property | Value |
+|---------|------|
+| Total Samples | 189,420 |
+| Languages | 10 |
+| Samples per Language | 18,942 |
+| Modalities | Audio + Text |
+| Tasks | 3 |
 
-Property	Value
-Total Samples	189,420
-Languages	10
-Samples per Language	18,942
-Modalities	Audio + Text
-Tasks	3
+### Annotations
 
+- Scenario Classification (7 categories)  
+- Fraud vs Non-Fraud (Binary)  
+- Fraud-Type Classification (7 types)  
 
+---
 
- Annotations
-	•	Scenario Classification (7 categories)
-	•	Fraud vs Non-Fraud (Binary)
-	•	Fraud-Type Classification (7 types)
+## Tasks
 
+### Scenario Classification
+- Customer Service  
+- Delivery  
+- Ride-hailing  
+- Retail Transactions  
+- Appointment Scheduling  
+- Food Ordering  
+- Traffic Information  
 
- Tasks
+### Fraud Detection
 
-1️⃣ Scenario Classification
-
-Classify the type of telecom conversation:
-	•	Customer Service
-	•	Delivery
-	•	Ride-hailing
-	•	Retail Transactions
-	•	Appointment Scheduling
-	•	Food Ordering
-	•	Traffic Information
-
-
-2️⃣ Fraud Detection
-
-Binary classification:
-
+```
 Fraud vs Non-Fraud
+```
 
+### Fraud-Type Classification
 
+- Banking Fraud  
+- Customer Service Impersonation  
+- Investment Scam  
+- Phishing  
+- Lottery Scam  
+- Kidnapping  
+- Identity Theft  
 
-3️⃣ Fraud-Type Classification
-	•	Banking Fraud
-	•	Customer Service Impersonation
-	•	Investment Scam
-	•	Phishing
-	•	Lottery Scam
-	•	Kidnapping
-	•	Identity Theft
+---
 
+## Models
 
- Models
+### Speech Models
+- Wav2Vec2  
+- WavLM  
+- HuBERT  
+- Whisper  
+- XLS-R  
 
- Speech Models (SPTMs)
-	•	Wav2Vec2
-	•	WavLM
-	•	HuBERT
-	•	Whisper
-	•	XLS-R
+### Text Models
+- XLM-RoBERTa  
+- IndicBERTv2  
+- MuRIL  
 
+---
 
+## Methodology
 
- Text Models (TPTMs)
-	•	XLM-RoBERTa
-	•	IndicBERTv2
-	•	MuRIL
+### Unimodal Approaches
+- Fully Connected Network (FCN)  
+- CNN-based architectures  
 
+### Multimodal Fusion
+- Concatenation  
+- Cross-Attention  
 
+---
 
- Methodology
+## Training Setup
 
-🔹 Unimodal Approaches
-	•	Fully Connected Network (FCN)
-	•	CNN-based architectures
-
-🔹 Multimodal Fusion
-	•	Concatenation
-	•	Cross-Attention
-
-
-
- Training Setup
-
+```
 Optimizer: AdamW
 Learning Rate: 1e-3
 Batch Size: 32
 Epochs: 5
 Validation: 5-Fold Cross Validation
+```
 
+---
 
+## Key Findings
 
- Key Findings
-	•	 Text models outperform audio and multimodal approaches
-	•	 Fraud Detection is the easiest task
-	•	 Fraud-Type Classification is the most challenging
-	•	 Performance varies across languages (high-resource > low-resource)
+- Text models outperform audio and multimodal approaches  
+- Fraud Detection is the easiest task  
+- Fraud-Type Classification is the most challenging  
+- Performance varies across languages (high-resource > low-resource)  
 
+---
 
+## Limitations
 
- Limitations
-	•	Synthetic audio generated via TTS
-	•	Limited speaker diversity
-	•	Restricted to Indic languages
-	•	Uniform dataset distribution (not real-world skewed)
+- Synthetic audio generated via TTS  
+- Limited speaker diversity  
+- Restricted to Indic languages  
+- Uniform dataset distribution  
 
+---
 
+## Future Work
 
- Future Work
-	•	Real-world multilingual telecom datasets
-	•	Improved multimodal fusion strategies
-	•	Better low-resource language representations
-	•	Fine-grained fraud intent modeling
+- Real-world multilingual datasets  
+- Improved multimodal fusion  
+- Better low-resource modeling  
+- Fine-grained fraud intent understanding  
 
+---
 
-Project Structure
+## Project Structure
 
+```
 INDICA/
 │── dataset/
 │   ├── Audio_samples/
@@ -183,69 +188,83 @@ INDICA/
 │
 │── README.md
 │── requirements.txt
+```
 
+---
 
+## Resources
 
- Resources
-	•	Dataset: https://huggingface.co/datasets/vikrant-vikram/INDICA/tree/main, https://drive.google.com/drive/folders/1kis1b8sVOypv4xNb-QhB8pch4J9gYVZ-?usp=share_link
-	•	Paper: INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
+- Dataset: https://huggingface.co/datasets/vikrant-vikram/INDICA  
+- Google Drive: https://drive.google.com/drive/folders/1kis1b8sVOypv4xNb-QhB8pch4J9gYVZ-?usp=share_link  
+- Paper: INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark  
 
+---
 
-## Description
+## Dataset Files
 
-- **Gujarati_audio.tar.gz** — Gujarati speech audio files  
-- **Hindi_audio.tar.gz** — Hindi speech audio files  
-- **Tamil_audio.tar.gz** — Tamil speech audio files  
-- **Text_samples.tar.gz** — Text transcriptions corresponding to audio samples  
+- Gujarati_audio.tar.gz — Gujarati audio  
+- Hindi_audio.tar.gz — Hindi audio  
+- Tamil_audio.tar.gz — Tamil audio  
+- Text_samples.tar.gz — Text data
+- ....... 
 
 ---
 
 ## How to Use
 
-### 1. Download files
-
-Using Hugging Face CLI:
+### Download
 
 ```bash
 hf download vikrant-vikram/INDICA Gujarati_audio.tar.gz
 hf download vikrant-vikram/INDICA Hindi_audio.tar.gz
 hf download vikrant-vikram/INDICA Tamil_audio.tar.gz
 hf download vikrant-vikram/INDICA Text_samples.tar.gz
+......
+```
 
+### Extract
 
-Extract the files 
+```bash
 tar -xzf Gujarati_audio.tar.gz
 tar -xzf Hindi_audio.tar.gz
 tar -xzf Tamil_audio.tar.gz
 tar -xzf Text_samples.tar.gz
+....
+```
 
-Expected structure after extraction
+### Structure
 
+```
 Audio_samples/
 ├── Gujarati/
 ├── Hindi/
 ├── Tamil/
+....
 
 Text_samples/
 ├── Gujarati/
 ├── Hindi/
 ├── Tamil/
+....
+```
 
+---
 
- Authors
-	•	Nitin Choudhury
-	•	Samyuktha Chilaka
-	•	Bikrant Bikram Pratap Maurya
-	•	Arun Balaji Buduru
+## Authors
 
+- Nitin Choudhury  
+- Samyuktha Chilaka  
+- Bikrant Bikram Pratap Maurya  
+- Arun Balaji Buduru  
 
+---
 
- Citation
+## Citation
 
+```bibtex
 @inproceedings{indica2026,
   title={INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark},
   author={Choudhury, Nitin and Chilaka, Samyuktha and Maurya, Bikrant and Buduru, Arun},
   year={2026}
 }
-
-
+```
