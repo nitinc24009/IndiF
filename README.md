@@ -1,4 +1,4 @@
- INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
+INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
 
 <p align="center">
   <b> Multilingual |  Audio + Text |  Benchmark for Fraud Detection</b>
@@ -13,8 +13,6 @@
 </p>
 
 
-
-⸻
 
 Overview
 
@@ -31,7 +29,6 @@ INDICA addresses key challenges in existing systems:
 	•	Limited reproducibility
 	•	Poor cross-lingual generalization
 
-⸻
 
  Key Contributions
 	•	IndiF Dataset
@@ -44,7 +41,6 @@ INDICA addresses key challenges in existing systems:
 	•	 Multilingual Setup
 	•	Enables robust cross-lingual evaluation
 
-⸻
 
  Dataset: IndiF
 
@@ -52,7 +48,6 @@ INDICA addresses key challenges in existing systems:
 
 Assamese, Bengali, English, Gujarati, Hindi, Kannada, Malayalam, Odia, Tamil, Telugu
 
-⸻
 
  Dataset Statistics
 
@@ -64,14 +59,12 @@ Modalities	Audio + Text
 Tasks	3
 
 
-⸻
 
  Annotations
 	•	Scenario Classification (7 categories)
 	•	Fraud vs Non-Fraud (Binary)
 	•	Fraud-Type Classification (7 types)
 
-⸻
 
  Tasks
 
@@ -86,7 +79,6 @@ Classify the type of telecom conversation:
 	•	Food Ordering
 	•	Traffic Information
 
-⸻
 
 2️⃣ Fraud Detection
 
@@ -95,7 +87,6 @@ Binary classification:
 Fraud vs Non-Fraud
 
 
-⸻
 
 3️⃣ Fraud-Type Classification
 	•	Banking Fraud
@@ -106,7 +97,6 @@ Fraud vs Non-Fraud
 	•	Kidnapping
 	•	Identity Theft
 
-⸻
 
  Models
 
@@ -117,14 +107,14 @@ Fraud vs Non-Fraud
 	•	Whisper
 	•	XLS-R
 
-⸻
+
 
  Text Models (TPTMs)
 	•	XLM-RoBERTa
 	•	IndicBERTv2
 	•	MuRIL
 
-⸻
+
 
  Methodology
 
@@ -136,7 +126,7 @@ Fraud vs Non-Fraud
 	•	Concatenation
 	•	Cross-Attention
 
-⸻
+
 
  Training Setup
 
@@ -147,7 +137,6 @@ Epochs: 5
 Validation: 5-Fold Cross Validation
 
 
-⸻
 
  Key Findings
 	•	 Text models outperform audio and multimodal approaches
@@ -155,7 +144,7 @@ Validation: 5-Fold Cross Validation
 	•	 Fraud-Type Classification is the most challenging
 	•	 Performance varies across languages (high-resource > low-resource)
 
-⸻
+
 
  Limitations
 	•	Synthetic audio generated via TTS
@@ -163,7 +152,7 @@ Validation: 5-Fold Cross Validation
 	•	Restricted to Indic languages
 	•	Uniform dataset distribution (not real-world skewed)
 
-⸻
+
 
  Future Work
 	•	Real-world multilingual telecom datasets
@@ -171,9 +160,8 @@ Validation: 5-Fold Cross Validation
 	•	Better low-resource language representations
 	•	Fine-grained fraud intent modeling
 
-⸻
 
- Project Structure
+Project Structure
 
 INDICA/
 │── dataset/
@@ -197,15 +185,11 @@ INDICA/
 │── requirements.txt
 
 
-⸻
 
  Resources
 	•	Dataset: https://huggingface.co/datasets/vikrant-vikram/INDICA/tree/main, https://drive.google.com/drive/folders/1kis1b8sVOypv4xNb-QhB8pch4J9gYVZ-?usp=share_link
 	•	Paper: INDICA: An Audio Indic-Language Telecom Fraud Analysis Benchmark
 
-⸻
-
----
 
 ## Description
 
